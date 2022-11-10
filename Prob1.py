@@ -1,5 +1,6 @@
 import numpy as np
 def LUdecomposition(A):
+    m,n = A.shape
     U = A.copy()
     L = np.zeros_like(U)
     np.fill_diagonal(L, 1)
