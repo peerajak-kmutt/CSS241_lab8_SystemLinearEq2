@@ -1,10 +1,7 @@
 import numpy as np
 def LUdecomposition(A):
-    m,n = A.shape
-    bn, = b.shape
-    assert n==m==bn
     U = A.copy()
-    L = np.zeros_like(Aans)
+    L = np.zeros_like(U)
     np.fill_diagonal(L, 1)
 
     #Your code here
