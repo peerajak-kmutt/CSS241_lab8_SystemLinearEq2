@@ -18,8 +18,9 @@ def test_2():
     A = np.array(Aa,dtype=np.float64)
     L,U = p1.LUdecomposition(A)
     Areconstruct = np.dot(L,U)
+    Lans = np.array([[ 1.,   0.,   0.,   0. ], [ 2.,   1.,   0.,   0. ], [ 0.5 , 3.,   1.,   0. ], [-1.,  -0.5,  2.,   1. ]],dtype = np.float64)
     np.absolute(A-Areconstruct) <1e-8).all()
-    assert np.absolute(A-Areconstruct) <1e-8).all()
+    assert np.absolute(A-Areconstruct) <1e-8).all() and np.absolute(L-Lans) <1e-8).all()
     
  '''test z'''
 def test_3():
@@ -28,6 +29,6 @@ def test_3():
     bb = [16,26,-19,-34]
     A = np.array(Aa,dtype=np.float64)
     b = np.array(bb, dtype=np.float64)    
-    z = Lsubstitution(L,b):
+    z = p1.Lsubstitution(L,b):
     zans = np.array([16. -6. -9. -3.])
     assert ( np.absolute(z - zans )<1e-5).all()
