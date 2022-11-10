@@ -30,5 +30,5 @@ def test_3():
     b = np.array(bb, dtype=np.float64) 
     L,U = p1.LUdecomposition(A)
     z = p1.Lsubstitution(L,b)
-    zans = np.array([16. -6. -9. -3.])
+    zans = np.array([16., -6., -9., -3.])
     assert ( np.absolute(z - zans )<1e-5).all()
