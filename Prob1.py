@@ -9,7 +9,7 @@ def LUdecomposition(A):
 
     #Your code here
     #end Your code
-    print('correct LU = A') if (np.absolute(np.dot(L,U)-A) < 1e-5).all() else print('wrong')
+    
     return L,U
 
 # Calculae Lz=b
